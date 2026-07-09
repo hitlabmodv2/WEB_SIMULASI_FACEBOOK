@@ -1,13 +1,9 @@
 kind = "web"
 previewPath = "/"
-title = "Fakebook — Social Simulator"
+title = "Fakebook"
 version = "1.0.0"
 id = "artifacts/fakebook"
 router = "path"
-
-[[integratedSkills]]
-name = "react-vite"
-version = "1.0.0"
 
 [[services]]
 name = "web"
@@ -19,8 +15,8 @@ run = "pnpm --filter @workspace/fakebook run dev"
 
 [services.production]
 build = [ "pnpm", "--filter", "@workspace/fakebook", "run", "build" ]
-publicDir = "artifacts/fakebook/dist/public"
 serve = "static"
+publicDir = "artifacts/fakebook/dist/public"
 
 [[services.production.rewrites]]
 from = "/*"

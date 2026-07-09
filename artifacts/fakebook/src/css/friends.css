@@ -1,0 +1,98 @@
+/* ===== FRIENDS PAGE ===== */
+.friends-page { max-width: 1050px; margin: 0 auto; }
+
+.friends-page-title {
+  font-size: 24px; font-weight: 800;
+  color: var(--text-primary); margin-bottom: 20px; padding: 0 4px;
+}
+
+.friends-section-title {
+  font-size: 20px; font-weight: 700;
+  color: var(--text-primary); margin-bottom: 12px; padding: 0 4px;
+}
+
+.friend-card {
+  background: var(--bg-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: box-shadow .15s;
+  cursor: pointer;
+}
+.friend-card:hover { box-shadow: var(--shadow-md); }
+
+.friend-card-avatar {
+  width: 100%; aspect-ratio: 1;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.friend-card-body { padding: 8px 12px 12px; }
+.friend-card-name {
+  font-size: 15px; font-weight: 700; color: var(--text-primary);
+  margin-bottom: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.friend-card-mutual { font-size: 13px; color: var(--text-secondary); margin-bottom: 10px; }
+.friend-card-actions { display: flex; flex-direction: column; gap: 6px; }
+
+.btn-confirm {
+  width: 100%; padding: 7px;
+  background: var(--fb-blue); color: white;
+  border-radius: var(--radius-sm); font-size: 15px; font-weight: 600;
+  cursor: pointer; border: none; transition: background .1s;
+}
+.btn-confirm:hover { background: var(--fb-blue-dark); }
+
+.btn-delete {
+  width: 100%; padding: 7px;
+  background: var(--active-bg); color: var(--text-primary);
+  border-radius: var(--radius-sm); font-size: 15px; font-weight: 600;
+  cursor: pointer; border: none; transition: background .1s;
+}
+.btn-delete:hover { background: #d8dadf; }
+
+.btn-add-friend {
+  width: 100%; padding: 7px;
+  background: var(--hover-blue); color: var(--fb-blue);
+  border-radius: var(--radius-sm); font-size: 15px; font-weight: 600;
+  cursor: pointer; border: none; transition: background .1s;
+}
+.btn-add-friend:hover { background: #d8e9ff; }
+
+.btn-added {
+  width: 100%; padding: 7px;
+  background: var(--active-bg); color: var(--text-primary);
+  border-radius: var(--radius-sm); font-size: 15px; font-weight: 600;
+  cursor: not-allowed; border: none;
+}
+
+/* Horizontal scroll - people you may know */
+.people-scroll {
+  display: flex; gap: 12px;
+  overflow-x: auto; padding-bottom: 8px;
+  scrollbar-width: none; margin-bottom: 24px;
+}
+.people-scroll::-webkit-scrollbar { display: none; }
+.people-scroll .friend-card { flex-shrink: 0; width: 172px; }
+
+/* Request grid */
+.friend-requests-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(172px, 1fr));
+  gap: 12px; margin-bottom: 24px;
+}
+
+/* All friends list */
+.all-friends-list { display: flex; flex-direction: column; gap: 4px; }
+.all-friend-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 8px; border-radius: var(--radius-sm);
+  cursor: pointer; transition: background .1s;
+}
+.all-friend-item:hover { background: var(--hover-bg); }
+.all-friend-info { flex: 1; min-width: 0; }
+.all-friend-name {
+  font-size: 15px; font-weight: 600; color: var(--text-primary);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.all-friend-mutual { font-size: 13px; color: var(--text-secondary); }
+.all-friend-actions { display: flex; gap: 8px; }

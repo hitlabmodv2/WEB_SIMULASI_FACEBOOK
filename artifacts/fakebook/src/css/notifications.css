@@ -1,0 +1,130 @@
+/* ===== NOTIFICATIONS PAGE ===== */
+.notifications-page {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.notifications-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding: 0 4px;
+}
+
+.notifications-page-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.notif-section-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 16px 4px 8px;
+}
+
+.notif-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.1s;
+  position: relative;
+}
+
+.notif-item:hover { background: var(--hover-bg); }
+.notif-item.unread { background: #edf2fb; }
+.notif-item.unread:hover { background: #dde8f9; }
+
+.notif-avatar-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.notif-type-icon {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  border: 2px solid white;
+}
+
+.notif-type-icon.like    { background: var(--fb-blue); }
+.notif-type-icon.comment { background: var(--fb-green); }
+.notif-type-icon.friend  { background: var(--fb-blue); }
+.notif-type-icon.tag     { background: #f5c518; }
+.notif-type-icon.share   { background: var(--fb-blue); }
+.notif-type-icon.birthday{ background: var(--fb-red); }
+
+.notif-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.notif-text {
+  font-size: 15px;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.notif-text strong { font-weight: 700; }
+
+.notif-time {
+  font-size: 13px;
+  color: var(--fb-blue);
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.notif-item.unread .notif-time {
+  color: var(--fb-blue);
+}
+
+.notif-unread-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--fb-blue);
+  flex-shrink: 0;
+}
+
+.notif-preview-img {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  background: var(--bg-primary);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.notif-options {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--active-bg);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.notif-item:hover .notif-options { display: flex; }

@@ -1,0 +1,96 @@
+/* ===== STORIES ROW ===== */
+.stories-row {
+  display: flex; gap: 8px;
+  overflow-x: auto; padding: 0 2px 4px;
+  scrollbar-width: none; margin-bottom: 16px;
+}
+.stories-row::-webkit-scrollbar { display: none; }
+
+/* Common story card */
+.story-card {
+  flex-shrink: 0; width: 117px; height: 210px;
+  border-radius: var(--radius-lg); overflow: hidden;
+  position: relative; cursor: pointer;
+  box-shadow: var(--shadow-card); background: #b0b3b8;
+  transition: transform .15s, filter .15s;
+}
+.story-card:hover { transform: scale(1.03); }
+
+/* Story background with text */
+.story-bg {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+}
+.story-text-content {
+  color: white; font-weight: 700; font-size: 16px;
+  text-align: center; padding: 8px;
+  text-shadow: 0 1px 4px rgba(0,0,0,.4);
+  line-height: 1.3; word-break: break-word;
+}
+.story-gradient-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 45%, rgba(0,0,0,.55) 100%);
+  pointer-events: none;
+}
+
+/* Avatar ring */
+.story-avatar-ring {
+  position: absolute; top: 10px; left: 10px;
+  border: 3px solid var(--fb-blue); border-radius: 50%;
+  overflow: hidden; box-shadow: 0 0 0 2px white;
+}
+
+.story-username {
+  position: absolute; bottom: 10px; left: 6px; right: 6px;
+  font-size: 12px; font-weight: 700; color: white;
+  text-shadow: 0 1px 3px rgba(0,0,0,.6);
+  text-align: center; line-height: 1.2;
+}
+
+/* Create story card */
+.story-create-card { background: var(--bg-white); }
+.story-create-photo {
+  width: 100%; height: 65%;
+  background: var(--bg-primary);
+  display: flex; align-items: center; justify-content: center;
+}
+.story-create-footer {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 10px 8px 14px;
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  font-size: 13px; font-weight: 700; color: var(--text-primary);
+}
+.story-create-plus {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--fb-blue); margin-top: -28px;
+  display: flex; align-items: center; justify-content: center;
+  border: 3px solid white; box-shadow: var(--shadow-sm);
+}
+
+/* ===== CREATE POST BOX ===== */
+.create-post-box {
+  background: var(--bg-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: 12px 16px 8px;
+  margin-bottom: 16px;
+}
+.create-post-top {
+  display: flex; align-items: center; gap: 8px; margin-bottom: 8px;
+}
+.create-post-input {
+  flex: 1; background: var(--bg-primary);
+  border: none; border-radius: var(--radius-full);
+  padding: 10px 16px; font-size: 17px; color: var(--text-secondary);
+  cursor: pointer; text-align: left; transition: background .1s;
+}
+.create-post-input:hover { background: #d8dadf; }
+.create-post-divider { height: 1px; background: var(--border-light); margin-bottom: 2px; }
+.create-post-actions { display: flex; gap: 2px; }
+.create-post-action {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  gap: 6px; padding: 8px 4px; border-radius: var(--radius-sm);
+  background: none; font-size: 15px; font-weight: 600; color: var(--text-secondary);
+  transition: background .1s; cursor: pointer;
+}
+.create-post-action:hover { background: var(--hover-bg); color: var(--text-primary); }
